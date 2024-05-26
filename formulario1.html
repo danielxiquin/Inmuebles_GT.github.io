@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="assets/css/style-2.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Recomendación</header>
+      <form id="myForm" action="http://localhost:3000/addData" method="POST" class="form">
+        
+        <div class="services-box">
+          <h3>Required Services</h3>
+          <div class="services-option">
+            <div class="services">
+              <input type="checkbox" id="check-gym" name="requiredServices[]" value="gym" checked />
+              <label for="check-gym">Gym</label>
+            </div>
+            <div class="services">
+              <input type="checkbox" id="check-gas" name="requiredServices[]" value="gas" />
+              <label for="check-gas">Gas Station</label>
+            </div>
+            <div class="services">
+              <input type="checkbox" id="check-academy" name="requiredServices[]" value="academy" />
+              <label for="check-academy">Academy</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box information">
+          <label>Information about the building</label>
+          <div class="column">
+            <div class="select-box">
+                <select id="building-type" name="typeBuilder">
+                    <option value="" hidden>Building type</option>
+                    <option value="Houses">Houses</option>
+                    <option value="Apartments">Apartments</option>
+                    <option value="Premises">Premises</option>
+                </select>
+            </div>
+        </div>
+        <div class="column" id="security-options" style="display: none;">
+            <div class="select-box">
+                <select id="security" name="minDanger">
+                    <option value="" hidden>Security</option>
+                    <option value="Red">Red</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
+        </div>
+        <div class="column" id="pet-friendly-options" style="display: none;">
+            <div class="select-box">
+                <select id="pet-friendly" name="wannaPetFriendly">
+                    <option value="" hidden>Pet friendly</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="column" id="commercial-activity-options" style="display: none;">
+            <div class="select-box" >
+                <input  name="commercialActivity" type="text" id="commercial-activity" placeholder="Commercial Activity">
+            </div>
+        </div>
+        </div>
+        <div class="input-box">
+            <label>Budget</label>
+            <input type="number" name="budget" step="0.01" placeholder="Enter the budget" required />
+        </div>
+        <button type="submit" id="submitButton">Submit</button>
+
+      </form>
+
+    </section>
+  </body>
+
+  <script src="assets/js/envio.js"></script>
+  <script src="assets/js/obtencion_datos.js"></script>
+  <script src="assets/js/lab21.js"></script>
+  <script src="assets/js/mostrarResultado.js"></script>
+  
+ 

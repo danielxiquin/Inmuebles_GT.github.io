@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background: rgb(0, 0, 0);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    position: fixed;
+    background: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: rgb(219, 233, 19);
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: white;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: rgb(239, 255, 17);
+
+}
+
+#menu{
+    display: none;
+}
+
+.menu img{
+    width: 150px;
+}
+.menu-icon{
+    width: 23px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.about{
+    padding: 0 0 100px 0;
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.about-img{
+    flex-basis: 40%;
+}
+
+.about-img img{
+    height: 300px;
+    width: 400px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 102, 0);
+}
+
+.about-txt {
+    flex-basis: 60%;
+}
+
+h2{
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #e97957;
+    margin-bottom: 20px;
+}
+
+
+.about-txt p{
+    color:#B3B3B3;
+    font-size: 20px;
+    margin-bottom: 50px;
+}

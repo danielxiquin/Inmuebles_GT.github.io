@@ -73,8 +73,10 @@ function filterHouses(houses, clientRequirements) {
 function filterApartments(apartments, clientRequirements) {
     var filteredBuildings = [];
     var base = [];
+
     apartments.forEach(function (apartment) {
         var newapartment = new Apartments(apartment);
+
         if (newapartment.isPetFriendly === clientRequirements.wannaPetFriendly) {
             if (newapartment.price <= clientRequirements.budget) {
                 base.push(newapartment);
@@ -88,6 +90,7 @@ function filterApartments(apartments, clientRequirements) {
         };
         filteredBuildings.push(final);
     });
+    
     return filteredBuildings;
 }
 function filterPremises(premises, clientRequirements) {
@@ -115,7 +118,6 @@ function recommendBuildings(input1, input2) {
     let recommendedBuildings = [];
     let temp = [];
     const clientRequirements = input2;
-    
     if (clientRequirements.typeBuilder === "Houses") {
         input1.forEach(function (obj) {
             if (clientRequirements.typeBuilder === "Houses" && obj.builds && obj.builds.Houses) {
@@ -127,6 +129,7 @@ function recommendBuildings(input1, input2) {
     else if (clientRequirements.typeBuilder === "Apartments") {
         input1.forEach(function (obj) {
             if (clientRequirements.typeBuilder === "Apartments" && obj.builds && obj.builds.Apartments) {
+
                 temp = filterApartments(obj.builds.Apartments, clientRequirements);
                 recommendedBuildings = recommendedBuildings.concat(temp);
             }
@@ -140,7 +143,7 @@ function recommendBuildings(input1, input2) {
             }
         });
     }
-    recommendedBuildings.sort(function (a, b) { return a.price - b.price; });
+    recommendedBuildings.sort(function (a, b) { return b.price - a.price; });
     var recommendedIds = recommendedBuildings.map(function (building) { return building.id; });
 
     return recommendedIds;
@@ -160,8 +163,19 @@ function fetchDataAndRecommend() {
                 const input1 = input.input1;
                 const input2 = input.input2;
                 const result = recommendBuildings(input1, input2);
+                const resultadofinal =result[0];
+                
                 const resultadoElement = document.getElementById('resultado');
-                resultadoElement.textContent = 'Resultado: ' + result.join(', ');
+                const enlaceRecomendacion = document.getElementById('enlace-recomendacion')
+                if(result.length > 0){
+                    resultadoElement.textContent = 'Resultado: ' + resultadofinal;
+                    enlaceRecomendacion.textContent = 'Ir a subasta'
+                    enlaceRecomendacion.href = 'formulario2.html'
+                }else{
+                    resultadoElement.textContent = 'No se encontro una construccion segun tu preferencia';
+                    enlaceRecomendacion.textContent = 'Volver'
+                    enlaceRecomendacion.href = 'formulario1.html'
+                }
             });
         })
         .catch(error => {

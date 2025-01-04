@@ -1,20 +1,92 @@
 [
   {
     "dpi": 8107697479647,
-    "firstName": "River",
-    "lastName": "Considine",
+    "firstName": "Valentina",
+    "lastName": "Rodriguez",
     "birthDate": "1965-10-21T23:01:45.825Z",
-    "job": "Regional Metrics Agent",
-    "placeJob": "Stacyview",
+    "job": "Bibliotecaria",
+    "placeJob": "Biblioteca IGGS",
     "salary": 5130
   },
   {
-    "dpi": 23123123,
-    "firstName": "daniel",
-    "lastName": "xiquin",
-    "birthDate": "3123-02-23",
-    "job": "dev",
-    "placeJob": "casa",
-    "salary": 232323
+    "dpi": 239891723812,
+    "firstName": "Daniel",
+    "lastName": "Xiquin",
+    "birthDate": "3888-02-12",
+    "job": "Desarrollador de software",
+    "placeJob": "Telefonia Cable GT",
+    "salary": 12300
+  },
+  {
+    "dpi": 2102962604186,
+    "firstName": "Camila",
+    "lastName": "Navarro",
+    "birthDate": "1981-04-10T04:58:06.423Z",
+    "job": "Trabajadora social",
+    "placeJob": "Asesorias S.A",
+    "salary": 6433
+  },
+  {
+    "dpi": 3227539491954,
+    "firstName": "Mateo",
+    "lastName": "Torres",
+    "birthDate": "1999-07-04T14:51:16.147Z",
+    "job": "Mecanico",
+    "placeJob": "Taller electomecanico Ebenezer",
+    "salary": 6266
+  },
+  {
+    "dpi": 7563562997367,
+    "firstName": "Alejandro",
+    "lastName": "Cruz",
+    "birthDate": "1992-09-11T04:53:11.800Z",
+    "job": "Operador de fabrica",
+    "placeJob": "Industrias de acero Chavez S.A",
+    "salary": 4174
+  },
+  {
+    "dpi": 3341007349007,
+    "firstName": "Andres",
+    "lastName": "Gonzalez",
+    "birthDate": "1996-09-01T03:23:15.534Z",
+    "job": "Recursos humanos",
+    "placeJob": "Banco Nacional",
+    "salary": 6323
+  },
+  {
+    "dpi": 5557511524042,
+    "firstName": "Isabella",
+    "lastName": "Lopez",
+    "birthDate": "1988-11-12T06:05:47.511Z",
+    "job": "Diseñadora de marketing",
+    "placeJob": "Pollo Feliz S.A ",
+    "salary": 6540
+  },
+  {
+    "dpi": 7931512765281,
+    "firstName": "Joaquin",
+    "lastName": "Medina",
+    "birthDate": "1960-09-01T00:47:05.433Z",
+    "job": "Atencion al cliente",
+    "placeJob": "Automotriz EAC",
+    "salary": 8692
+  },
+  {
+    "dpi": 7155464374755,
+    "firstName": "David",
+    "lastName": "Martinez",
+    "birthDate": "1973-04-12T17:18:33.461Z",
+    "job": "Personal de seguridad",
+    "placeJob": "Centro comercial Expata",
+    "salary": 8705
+  },
+  {
+    "dpi": 4833562299557,
+    "firstName": "Sofia",
+    "lastName": "Paredes",
+    "birthDate": "1977-01-06T08:17:51.684Z",
+    "job": "Aministradora de paquetes",
+    "placeJob": "Transportes Monja Negra",
+    "salary": 6847
   }
 ]

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <link rel="stylesheet" href="assets/css/style-2.css" />
+    <link rel="icon" href="assets/img/inmuebles.png">
+    <title>Formulario</title>
+
   </head>
   <body>
     <section class="container">
@@ -13,7 +16,7 @@
       <form id="myForm" action="http://localhost:3000/addData" method="POST" class="form">
         
         <div class="services-box">
-          <h3>Required Services</h3>
+          <h3>Servicios requeridos</h3>
           <div class="services-option">
             <div class="services">
               <input type="checkbox" id="check-gym" name="requiredServices[]" value="gym" checked />
@@ -21,34 +24,34 @@
             </div>
             <div class="services">
               <input type="checkbox" id="check-gas" name="requiredServices[]" value="gas" />
-              <label for="check-gas">Gas Station</label>
+              <label for="check-gas">Gasolinera</label>
             </div>
             <div class="services">
               <input type="checkbox" id="check-academy" name="requiredServices[]" value="academy" />
-              <label for="check-academy">Academy</label>
+              <label for="check-academy">Academia</label>
             </div>
           </div>
         </div>
         <div class="input-box information">
-          <label>Information about the building</label>
+          <label>Información sobre tipo de construcción</label>
           <div class="column">
             <div class="select-box">
                 <select id="building-type" name="typeBuilder">
-                    <option value="" hidden>Building type</option>
-                    <option value="Houses">Houses</option>
-                    <option value="Apartments">Apartments</option>
-                    <option value="Premises">Premises</option>
+                    <option value="" hidden>Tipo de construcción</option>
+                    <option value="Houses">Casas</option>
+                    <option value="Apartments">Apartamentos</option>
+                    <option value="Premises">Instalaciones</option>
                 </select>
             </div>
         </div>
         <div class="column" id="security-options" style="display: none;">
             <div class="select-box">
                 <select id="security" name="minDanger">
-                    <option value="" hidden>Security</option>
-                    <option value="Red">Red</option>
-                    <option value="Orange">Orange</option>
-                    <option value="Yellow">Yellow</option>
-                    <option value="Green">Green</option>
+                    <option value="" hidden>Zona de Seguridad</option>
+                    <option value="Red">Roja</option>
+                    <option value="Orange">Anaranjada</option>
+                    <option value="Yellow">Amarilla</option>
+                    <option value="Green">Verde</option>
                 </select>
             </div>
         </div>
@@ -56,22 +59,23 @@
             <div class="select-box">
                 <select id="pet-friendly" name="wannaPetFriendly">
                     <option value="" hidden>Pet friendly</option>
-                    <option value="Yes">Yes</option>
+                    <option value="Yes">Si</option>
                     <option value="No">No</option>
                 </select>
             </div>
         </div>
         <div class="column" id="commercial-activity-options" style="display: none;">
             <div class="select-box" >
-                <input  name="commercialActivity" type="text" id="commercial-activity" placeholder="Commercial Activity">
+                <input  name="commercialActivity" type="text" id="commercial-activity" placeholder="Comercial">
             </div>
         </div>
         </div>
         <div class="input-box">
-            <label>Budget</label>
-            <input type="number" name="budget" step="0.01" placeholder="Enter the budget" required />
+            <label>Presupuesto</label>
+            <input type="number" name="budget" step="0.01" placeholder="Ingresa tu Presupuesto" required />
         </div>
-        <button type="submit" id="submitButton">Submit</button>
+        <button type="submit" id="submitButton">Enviar</button>
+
 
       </form>
 
@@ -81,6 +85,5 @@
   <script src="assets/js/envio.js"></script>
   <script src="assets/js/obtencion_datos.js"></script>
   <script src="assets/js/lab21.js"></script>
-  <script src="assets/js/mostrarResultado.js"></script>
   
  

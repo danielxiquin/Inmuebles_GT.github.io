@@ -54,6 +54,41 @@ app.post('/addData', (req, res) => {
             }
         });
     });
+
+    fs.readFile('input_auctions.json', 'utf8', (err, otherData) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Error al leer el archivo input_auctions.json');
+            return;
+        }
+
+        let otherJsonData;
+        try {
+            otherJsonData = JSON.parse(otherData);
+        } catch (parseErr) {
+            console.error(parseErr);
+            res.status(500).send('Error al analizar el archivo JSON input_auctions.json');
+            return;
+        }
+
+        const indexToUpdate = 3;
+        if (otherJsonData[0].customers[indexToUpdate]) {
+            otherJsonData[0].customers[indexToUpdate].dpi = newData.DPI;
+            otherJsonData[0].customers[indexToUpdate].date = newData.birthday;
+        } else {
+            res.status(404).send('Cliente no encontrado en la posición especificada');
+            return;
+        }
+
+        fs.writeFile('input_auctions.json', JSON.stringify(otherJsonData, null, 2), (err) => {
+            if (err) {
+                console.error(err);
+                res.status(500).send('Error al escribir en el archivo input_auctions.json');
+                return;
+            }
+
+        });
+    });
 });
 
 

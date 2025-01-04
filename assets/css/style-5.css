@@ -40,7 +40,7 @@ body {
 
 
 .btn-1{
-  width: 200px;
+  width: 230px;
   padding: 13px 35px;
   background: linear-gradient(
       90deg,
@@ -48,7 +48,8 @@ body {
       rgb(214, 67, 22)
   );
   color: #fff;
-  font-size: 20px;
+  font-size: 17px;
   border-radius: 7px;
   text-align: center;
+  text-decoration: none;
 }

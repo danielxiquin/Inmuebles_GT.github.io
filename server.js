@@ -14,7 +14,6 @@ const tempAuctionsPath = path.join('/tmp', 'input_auctions.json');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Rutas para mostrar los formularios
 app.get('/formulario1', (req, res) => {
     res.sendFile(path.join(__dirname, 'formulario1.html'));
 });

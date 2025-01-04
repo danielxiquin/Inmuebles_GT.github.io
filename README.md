@@ -26,7 +26,7 @@ El repositorio contiene los siguientes archivos y directorios clave:
 - **HTML5**: Estructura y contenido de las páginas web.
 - **CSS3**: Estilos y diseño responsivo.
 - **JavaScript**: Funcionalidad e interactividad en el lado del cliente.
-- **Node.js**: Entorno de ejecución para el servidor.
+
 
 ## Instalación y Ejecución
 

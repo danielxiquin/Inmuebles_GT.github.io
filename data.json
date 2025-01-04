@@ -155,15 +155,7 @@
       }
     ],
     "input2": {
-      "requiredServices": [
-        "gym",
-        "gas"
-      ],
-      "typeBuilder": "Houses",
-      "minDanger": "",
-      "wannaPetFriendly": "",
-      "commercialActivity": "",
-      "budget": 123
+      
     }
   }
 ]

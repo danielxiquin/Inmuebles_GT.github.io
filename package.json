@@ -4,9 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start-server1": "node server.js",
-        "start-server2": "node server2.js",
-        "start-all": "concurrently \"node server.js\" \"node server2.js\""
+        "start-server1": "node server.js"
     },
     "author": "",
     "license": "ISC",

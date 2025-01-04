@@ -8,6 +8,8 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Mostrar formulario 1
+
 app.get('/formulario1', (req, res) => {
     res.sendFile(path.join(__dirname, 'formulario1.html'));  
 });
@@ -17,6 +19,9 @@ app.get('/formulario2', (req, res) => {
     res.sendFile(path.join(__dirname, 'formulario2.html'));  
 });
 
+const tempDataPath = path.join('/tmp', 'data.json');
+const tempInfoPath = path.join('/tmp', 'info.json');
+
 app.post('/addData', (req, res) => {
     const formType = req.body.formType;  
 
@@ -24,7 +29,7 @@ app.post('/addData', (req, res) => {
         const newData = req.body;
         newData.budget = parseFloat(newData.budget);
 
-        fs.readFile('data.json', 'utf8', (err, data) => {
+        fs.readFile(tempDataPath, 'utf8', (err, data) => {
             if (err) return res.status(500).send('Error al leer el archivo data.json');
 
             const jsonData = JSON.parse(data);
@@ -40,7 +45,7 @@ app.post('/addData', (req, res) => {
         newData.DPI = parseInt(newData.DPI, 10);
         newData.salary = parseFloat(newData.salary);
 
-        fs.readFile('info.json', 'utf8', (err, data) => {
+        fs.readFile(tempInfoPath, 'utf8', (err, data) => {
             if (err) return res.status(500).send('Error al leer el archivo info.json');
 
             const jsonData = JSON.parse(data);

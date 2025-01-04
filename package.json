@@ -1,0 +1,19 @@
+{
+    "name": "proyecto-final",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start-server1": "node server.js",
+        "start-server2": "node server2.js",
+        "start-all": "concurrently \"node server.js\" \"node server2.js\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2"
+    }
+}

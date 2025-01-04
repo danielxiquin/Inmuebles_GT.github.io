@@ -157,13 +157,13 @@
     "input2": {
       "requiredServices": [
         "gym",
-        "academy"
+        "gas"
       ],
       "typeBuilder": "Houses",
-      "minDanger": "Red",
+      "minDanger": "",
       "wannaPetFriendly": "",
       "commercialActivity": "",
-      "budget": 18000
+      "budget": 123
     }
   }
 ]

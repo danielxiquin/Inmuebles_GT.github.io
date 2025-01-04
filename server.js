@@ -63,6 +63,8 @@ app.post('/addData', (req, res) => {
             fs.writeFile(tempAuctionsPath, JSON.stringify(otherJsonData, null, 2), (err) => {
                 if (err) return res.status(500).send('Error al escribir en input_auctions.json');
                 res.status(200).send('Formulario 1 procesado correctamente y cliente registrado en subasta');
+
+                res.redirect('/Subasta.html');
             });
         });
     } else if (formType === 'formulario2') {  // Manejo del formulario 2

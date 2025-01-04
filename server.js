@@ -5,23 +5,20 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware para parsear datos de formularios y JSON
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Mostrar formulario 1
 app.get('/formulario1', (req, res) => {
-    res.sendFile(path.join(__dirname, 'formulario1.html'));  // Sirve el HTML del formulario 1
+    res.sendFile(path.join(__dirname, 'formulario1.html'));  
 });
 
 // Mostrar formulario 2
 app.get('/formulario2', (req, res) => {
-    res.sendFile(path.join(__dirname, 'formulario2.html'));  // Sirve el HTML del formulario 2
+    res.sendFile(path.join(__dirname, 'formulario2.html'));  
 });
 
-// Ruta POST unificada para manejar ambos formularios
 app.post('/addData', (req, res) => {
-    const formType = req.body.formType;  // Identificar qué formulario se envió
+    const formType = req.body.formType;  
 
     if (formType === 'formulario1') {  // Datos del formulario 1
         const newData = req.body;
